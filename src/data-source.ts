@@ -1,8 +1,8 @@
-import { DataSource } from "typeorm";
+import * as TypeORM from "typeorm";
 import "reflect-metadata";
 require("dotenv").config();
 
-export const AppDataSource = new DataSource({
+export const AppDataSource = new TypeORM.DataSource({
   type: "postgres",
   host: "localhost",
   port: 5432,
