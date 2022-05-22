@@ -1,8 +1,9 @@
-import * as TypeORM from "typeorm";
-import "reflect-metadata";
-require("dotenv").config();
+import { DataSource } from "typeorm"
+import "reflect-metadata"
+import { User } from "./entities"
+require("dotenv").config()
 
-export const AppDataSource = new TypeORM.DataSource({
+const AppDataSource = new DataSource({
   type: "postgres",
   host: "localhost",
   port: 5432,
@@ -11,6 +12,10 @@ export const AppDataSource = new TypeORM.DataSource({
   password: process.env.POSTGRES_PASSWORD,
   database: process.env.POSTGRES_DB,
 
-  synchronize: false,
+  synchronize: true,
+  migrations: ["src/migrations/*.ts"],
   logging: true,
-});
+  entities: [User],
+})
+
+export default AppDataSource

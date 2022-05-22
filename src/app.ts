@@ -1,22 +1,22 @@
-import "dotenv/config";
-import express from "express";
-import "express-async-errors";
-import { AppDataSource } from "./data-source";
+import "dotenv/config"
+import express from "express"
+import "express-async-errors"
+import AppDataSource from "./data-source"
 
 AppDataSource.initialize()
   .then(() => {
-    console.log("Data source was initialized");
+    console.log("Data source was initialized")
   })
   .catch((error) => {
-    console.log("Error occurred during data source initialization", error);
-  });
+    console.log("Error occurred during data source initialization", error)
+  })
 
-const app = express();
+const app = express()
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
 
-app.use(express.json());
+app.use(express.json())
 
 app.listen(PORT, () => {
-  console.log("Server Running on port ", PORT);
-});
+  console.log("Server running on port ", PORT)
+})

@@ -1,3 +1,3 @@
-import { User } from "../entities";
+import { User } from "../entities"
 
 export interface UserCreateService extends User {}

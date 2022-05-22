@@ -1,22 +1,11 @@
 {
   "name": "sprint5-entrega-carlos-hss",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev src/app.ts",
+    "typeorm": "typeorm-ts-node-commonjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kenzie-Academy-Brasil-Developers/sprint5-entrega-carlos-hss.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kenzie-Academy-Brasil-Developers/sprint5-entrega-carlos-hss/issues"
-  },
-  "homepage": "https://github.com/Kenzie-Academy-Brasil-Developers/sprint5-entrega-carlos-hss#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.1",
