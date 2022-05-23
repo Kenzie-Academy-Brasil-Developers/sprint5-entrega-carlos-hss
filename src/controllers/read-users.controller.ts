@@ -1,8 +1,9 @@
-import { Request, Response } from "express"
-import { ReadUsersService } from "../services"
+import * as Express from "express"
 
-export const readUsersController = async (req: Request, res: Response) => {
-  const users = await ReadUsersService()
+import { readUsersService } from "../services"
+
+export const readUsersController = async (req: Express.Request, res: Express.Response) => {
+  const users = await readUsersService()
 
   return res.json(users)
 }

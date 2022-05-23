@@ -1,4 +1,5 @@
 import * as Express from "express"
+
 import { userCreateService } from "../services"
 
 export async function userCreateController(req: Express.Request, res: Express.Response) {

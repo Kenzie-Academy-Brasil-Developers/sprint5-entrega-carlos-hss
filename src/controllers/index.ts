@@ -1,2 +1,5 @@
 export * from "./create-user.controller"
 export * from "./read-users.controller"
+export * from "./read-each-user.controller"
+export * from "./update-user.controller"
+export * from "./delete-user.controller"
